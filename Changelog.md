@@ -8,6 +8,15 @@
 
 ### Ignition Physics 4.x.x (20XX-XX-XX)
 
+### Ignition Physics 4.1.0 (2021-05-01)
+
+1. [TPE] Update link pose and velocity
+    * [Pull request #179](https://github.com/ignitionrobotics/ign-physics/pull/179)
+
+1. Infrastructure
+    * [Pull request #221](https://github.com/ignitionrobotics/ign-physics/pull/221)
+    * [Pull request #215](https://github.com/ignitionrobotics/ign-physics/pull/215)
+
 ### Ignition Physics 4.0.0 (2021-03-30)
 
 1. Remove nested models
@@ -84,6 +93,20 @@
 ## Ignition Physics 3.x
 
 ### Ignition Physics 3.x.x (20XX-XX-XX)
+
+### Ignition Physics 3.3.0 (2021-06-18)
+
+1. Fix DART deprecation warning
+    * [Pull request #263](https://github.com/ignitionrobotics/ign-physics/pull/263)
+
+1. Integrate Bullet engine
+    * [Pull request #208](https://github.com/ignitionrobotics/ign-physics/pull/208)
+
+1. Remove `tools/code_check` and update codecov
+    * [Pull request #257](https://github.com/ignitionrobotics/ign-physics/pull/257)
+
+1. [Citadel] Update tutorials
+    * [Pull request #204](https://github.com/ignitionrobotics/ign-physics/pull/204)
 
 ### Ignition Physics 3.2.0 (2021-04-28)
 
