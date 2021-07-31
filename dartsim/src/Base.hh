@@ -409,6 +409,7 @@ class Base : public Implements3d<FeatureList<Feature>>
           parentModelInfo->nestedModels.begin() + modelIndex);
     }
     this->models.RemoveEntity(skel);
+    this->skeletonsWithInverseDynamics.erase(skel);
     world->removeSkeleton(skel);
     return true;
   }
@@ -437,6 +438,7 @@ class Base : public Implements3d<FeatureList<Feature>>
   public: EntityStorage<JointInfoPtr, const DartJoint*> joints;
   public: EntityStorage<ShapeInfoPtr, const DartShapeNode*> shapes;
   public: std::unordered_map<std::size_t, dart::dynamics::Frame*> frames;
+  public: std::set<dart::dynamics::SkeletonPtr> skeletonsWithInverseDynamics;
 
   /// \brief Map from the fully qualified link name (including the world name)
   /// to the BodyNode object. This is useful for keeping track of BodyNodes even

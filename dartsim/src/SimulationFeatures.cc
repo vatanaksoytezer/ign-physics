@@ -61,6 +61,15 @@ void SimulationFeatures::WorldForwardStep(
   world->step();
   this->Write(_h.Get<ChangedWorldPoses>());
   // TODO(MXG): Fill in state
+
+  for (auto &skeleton: this->skeletonsWithInverseDynamics)
+  {
+    skeleton->computeInverseDynamics(
+        /*_withExternalForces=*/true,
+        /*_withDampingForces=*/true,
+        /*_withSpringForces=*/true);
+  }
+
 }
 
 void SimulationFeatures::Write(ChangedWorldPoses &_changedPoses) const
